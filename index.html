@@ -1,84 +1,109 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curiosidades do Mundo</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Curiosidades do Mundo</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Curiosidades</a></li>
-        <li><a href="#">Galeria</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <!-- IMAGEM DESTAQUE NO TOPO -->
-  <section style="text-align: center; margin-top: 20px;">
-    <img src="https://via.placeholder.com/800x400" alt="Imagem Curiosa" style="max-width: 100%; height: auto;">
-  </section>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+  padding: 0 10px;
+}
 
-  <!-- LINKS DE ASSUNTOS CURIOSOS COM ÂNCORAS -->
-  <section style="text-align: center; margin: 30px 0;">
-    <h2>Assuntos Curiosos</h2>
-    <ul style="list-style: none; padding: 0;">
-      <li><a href="#ancora1">🧠 Energia do Cérebro Humano</a></li>
-      <li><a href="#ancora2">🐙 O Sangue Azul dos Polvos</a></li>
-      <li><a href="#ancora3">🚀 Um Dia em Vênus</a></li>
-    </ul>
-  </section>
+/* Cabeçalho */
+header {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
 
-  <main>
+header h1 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
 
-    <!-- CONTEÚDO CURIOSO ORIGINAL -->
-    <section class="curiosidade">
-      <h2>Você sabia?</h2>
-      <p>O polvo tem três corações e seu sangue é azul!</p>
-    </section>
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
 
-    <section class="curiosidade">
-      <h2>Curiosidade Histórica</h2>
-      <p>Cleópatra viveu mais próxima do primeiro pouso na Lua do que da construção das pirâmides!</p>
-    </section>
+nav a {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease; /* Corrigido */
+  border-radius: 4px;
+}
 
-    <section class="curiosidade">
-      <h2>Curiosidade Científica</h2>
-      <p>O DNA humano é 60% semelhante ao de uma banana!</p>
-    </section>
+nav a:hover {
+  background-color: #34495e;
+}
 
-    <!-- NOVOS CONTEÚDOS COM ÂNCORAS -->
+/* Seções principais */
+main {
+  max-width: 800px;
+  margin: 30px auto;
+}
 
-    <!-- ÂNCORA 1 -->
-    <section id="ancora1" class="curiosidade">
-      <!-- Comentário: Esta é a âncora para "Energia do Cérebro Humano" -->
-      <h2>🧠 Energia do Cérebro Humano</h2>
-      <p>O cérebro humano representa apenas 2% da massa corporal, mas consome cerca de 20% da energia total do corpo, mesmo em repouso!</p>
-    </section>
+/* Seções de curiosidades */
+section.curiosidade {
+  background-color: #ffffff;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
 
-    <!-- ÂNCORA 2 -->
-    <section id="ancora2" class="curiosidade">
-      <!-- Comentário: Esta é a âncora para "O Sangue Azul dos Polvos" -->
-      <h2>🐙 O Sangue Azul dos Polvos</h2>
-      <p>Os polvos possuem três corações e seu sangue é azul devido à hemocianina, uma proteína baseada em cobre que transporta oxigênio.</p>
-    </section>
+section.curiosidade h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
 
-    <!-- ÂNCORA 3 -->
-    <section id="ancora3" class="curiosidade">
-      <!-- Comentário: Esta é a âncora para "Um Dia em Vênus" -->
-      <h2>🚀 Um Dia em Vênus</h2>
-      <p>Vênus gira tão lentamente que um dia completo no planeta é mais longo do que o tempo que ele leva para dar uma volta ao redor do Sol.</p>
-    </section>
+/* Lista de links de curiosidades com âncoras */
+ul {
+  padding-left: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
 
-  </main>
+ul li {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
 
-  <footer>
-    <p>&copy; 2025 Curiosidades do Mundo. Todos os direitos reservados.</p>
-  </footer>
-</body>
-</html>
+ul li a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Imagem de destaque */
+section img {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Rodapé */
+footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
